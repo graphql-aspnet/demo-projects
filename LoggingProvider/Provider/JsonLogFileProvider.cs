@@ -1,0 +1,53 @@
+﻿namespace GraphQL.AspNet.Examples.LoggingProvider.Provider
+{
+    using System;
+    using System.IO;
+    using GraphQL.AspNet.Interfaces.Logging;
+    using Microsoft.Extensions.Logging;
+
+    /// <summary>
+    /// <para>A logging provider that will record any <see cref="IGraphLogEntry"/> to
+    /// a file in the provided folder. All other log messages are ignored.</para>
+    ///
+    /// <para>WARNING: This log provider is for demonstration purposes only. DO NOT
+    /// use this log provider in a production environment.</para>
+    /// </summary>
+    public class JsonLogFileProvider : ILoggerProvider
+    {
+        private string _fileName;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JsonLogFileProvider" /> class.
+        /// </summary>
+        /// <param name="localFolder">The local folder to write to. The folder must exist and the application
+        /// must have write permissions to this folder.</param>
+        /// <param name="fileName">Name of the file. If not provided a unique filename will be created.</param>
+        public JsonLogFileProvider(string fileName)
+        {
+            var fileInfo = new FileInfo(fileName);
+            if (!fileInfo.Directory.Exists)
+            {
+                throw new ArgumentException($"The folder '{fileInfo.Directory.FullName}' does not exist. No log files can be written.");
+            }
+
+            _fileName = fileName;
+        }
+
+        /// <summary>
+        /// Creates a new <see cref="T:Microsoft.Extensions.Logging.ILogger" /> instance.
+        /// </summary>
+        /// <param name="categoryName">The category name for messages produced by the logger.</param>
+        /// <returns>Microsoft.Extensions.Logging.ILogger.</returns>
+        public ILogger CreateLogger(string categoryName)
+        {
+            return new JsonLogger(_fileName);
+        }
+
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
+        public void Dispose()
+        {
+        }
+    }
+}
