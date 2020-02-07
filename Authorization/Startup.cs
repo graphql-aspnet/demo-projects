@@ -11,6 +11,8 @@ namespace GraphQL.AspNet.Examples.Authorization
 
     public class Startup
     {
+        private const string ALL_ORIGINS_POLICY = "_allOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -21,6 +23,20 @@ namespace GraphQL.AspNet.Examples.Authorization
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // apply an unrestricted cors policy for the demo services
+            // to allow use on many of the tools for testing (graphiql, altair etc.)
+            // Do not do this in production
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                    ALL_ORIGINS_POLICY,
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
+            });
 
             // Configure http authentication against the in memory user store
             // This user store is for demo purposes only
@@ -52,6 +68,8 @@ namespace GraphQL.AspNet.Examples.Authorization
             }
 
             app.UseRouting();
+
+            app.UseCors(ALL_ORIGINS_POLICY);
 
             app.UseAuthentication();
             app.UseAuthorization();

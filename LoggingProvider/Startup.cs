@@ -12,6 +12,8 @@ namespace GraphQL.AspNet.Examples.LoggingProvider
 
     public class Startup
     {
+        private const string ALL_ORIGINS_POLICY = "_allOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -22,6 +24,22 @@ namespace GraphQL.AspNet.Examples.LoggingProvider
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // apply an unrestricted cors policy for the demo services
+            // to allow use on many of the tools for testing (graphiql, altair etc.)
+            // Do not do this in production
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                    ALL_ORIGINS_POLICY,
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
+            });
+
+
             // -------------------------------------------
             // The file where the logs will be written
             // Change this to a more permanent location
@@ -52,6 +70,8 @@ namespace GraphQL.AspNet.Examples.LoggingProvider
             }
 
             app.UseRouting();
+
+            app.UseCors(ALL_ORIGINS_POLICY);
 
             app.UseAuthorization();
 
