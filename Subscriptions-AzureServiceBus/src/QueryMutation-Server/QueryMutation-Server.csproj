@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>GraphQL.AspNet.Examples.Subscriptions.QueryMutationServer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\graphql-aspnet\src\graphql-aspnet-subscriptions\graphql-aspnet-subscriptions.csproj" />
+    <ProjectReference Include="..\..\..\..\graphql-aspnet\src\graphql-aspnet\graphql-aspnet.csproj" />
+    <ProjectReference Include="..\graphql-aspnet-azure-servicebus-connector\graphql-aspnet-azure-servicebus-connector.csproj" />
+    <ProjectReference Include="..\SharedResources\SharedResources.csproj" />
+  </ItemGroup>
+
+
+</Project>
