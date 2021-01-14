@@ -67,7 +67,8 @@
 
                 var message = new ServiceBusMessage(serializedData);
                 await sender.SendMessageAsync(message);
-                _logger?.LogDebug($"Event Published: {eventData.EventName} (Id: {eventData.Id})");
+
+                _logger?.LogDebug($"ASB Message Published: Topic: {_topic})");
             }
         }
     }

@@ -66,6 +66,12 @@ namespace GraphQL.AspNet.Examples.Subscriptions.SubscriptionServer
 
                 // sent by some electron-based graphql tools
                 options.AllowedOrigins.Add("file://");
+
+                // some graphql tools have a very low threshold for disconnecting a subscription
+                // when idle.  Set the server-sent keep alive value to a low interval
+                // to force them to keep the connection alive.
+                // in production the value you would use would be dependent on your needs.
+                options.KeepAliveInterval = TimeSpan.FromMilliseconds(300);
             });
 
             // Adds a hosted listener that will monitor the service
@@ -74,34 +80,12 @@ namespace GraphQL.AspNet.Examples.Subscriptions.SubscriptionServer
             //
             // *******************************************************
             // NOTE: for this example to work you must have your own
-            // Azure Service Bus namespace with an appropriate topic and key created
+            // Azure Service Bus namespace with an appropriate topic and subscription created
             // *******************************************************
-            services.AddHostedService<AzureServiceBusListenerService>((sp) =>
-            {
-                var cnnString = this.Configuration["AzureServiceBusConnectionString"];
-                var topic = this.Configuration["AzureServiceBusTopic"];
-                var subscription = this.Configuration["AzureServiceBusSubscription"];
-
-                if (string.IsNullOrWhiteSpace(cnnString))
-                    throw new SchemaConfigurationException("A valid Azure Service Bus connection string must be supplied");
-
-                if (string.IsNullOrWhiteSpace(topic))
-                    throw new SchemaConfigurationException("A valid Azure Service Bus Topic must be supplied");
-
-                if (string.IsNullOrWhiteSpace(subscription))
-                    throw new SchemaConfigurationException("A valid Azure Service Bus subscription must be supplied");
-
-                // the router is the link between external events
-                // and local processing. It is an object to
-                // which any subscription event can be sent and graphql-aspnet will
-                // correctly route the event to any subscribers
-                // for any registered schema. graphql-aspnet provides a default implementation
-                // but it can be overriden if necessary (usually this is not required)
-                var router = sp.GetService<ISubscriptionEventRouter>();
-                var logFactory = sp.GetService<ILoggerFactory>();
-
-                return new AzureServiceBusListenerService(logFactory, router, cnnString, topic, subscription);
-            });
+            var cnnString = this.Configuration["AzureServiceBusConnectionString"];
+            var topic = this.Configuration["AzureServiceBusTopic"];
+            var subscription = this.Configuration["AzureServiceBusSubscription"];
+            services.AddGraphQLAzureServiceBusListener(cnnString, topic, subscription);
 
             // Note that instead of the general "AddSubscriptions"
             // we are using "AddSubscriptionServer" this only registers
@@ -114,6 +98,12 @@ namespace GraphQL.AspNet.Examples.Subscriptions.SubscriptionServer
             .AddSubscriptionServer(options =>
             {
                 options.RequiredAuthenticatedConnection = false;
+
+                // some graphql tools have a very low threshold for disconnecting a subscription
+                // when idle.  Set the server-sent keep alive value to a low interval
+                // to force them to keep the connection alive.
+                // in production the value you would use would be dependent on your needs.
+                options.KeepAliveInterval = TimeSpan.FromMilliseconds(500);
             });
         }
 

@@ -89,7 +89,7 @@ namespace GraphQL.AspNet.Examples.Subscriptions.QueryMutationServer
                 // so as to complete the full introspection documentation
                 options.AddGraphAssembly(typeof(WidgetQueryController).Assembly);
             })
-                .AddSubscriptionPublishing();
+            .AddSubscriptionPublishing();
         }
 
         /// <summary>

@@ -4,7 +4,7 @@
     "Subscriptions_Server": {
       "commandName": "Project",
       "launchBrowser": false,
-      "applicationUrl": "http://localhost:55000",
+      "applicationUrl": "http://localhost:5001",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

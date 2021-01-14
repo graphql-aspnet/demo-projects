@@ -5,7 +5,7 @@
       "dev": {
         "url": "http://localhost:5000/graphql",
         "subscription": {
-          "url": "ws://localhost:55000/graphql"
+          "url": "ws://localhost:5001/graphql"
         }
       }
     }

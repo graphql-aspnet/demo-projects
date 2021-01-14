@@ -19,7 +19,7 @@
     /// A "hosted service" in the asp.net environment that continuously listens for
     /// messages on a service bus and forwards then into the graphql-aspnet
     /// </summary>
-    public class AzureServiceBusListenerService : BackgroundService
+    public class GraphQLAzureServiceBusListenerService : BackgroundService
     {
         // ****************************************************************************
         // Note: this demo connector does not attempt to address common service bus
@@ -43,7 +43,7 @@
         /// <param name="cnnString">The CNN string.</param>
         /// <param name="topic">The topic.</param>
         /// <param name="subscriptionName">Name of the subscription.</param>
-        public AzureServiceBusListenerService(
+        public GraphQLAzureServiceBusListenerService(
             ILoggerFactory loggerFactory,
             ISubscriptionEventRouter router,
             string cnnString,
@@ -77,10 +77,10 @@
                 _subscription,
                 options);
 
-            _logger?.LogInformation($"Service Bus Message Monitor Starting. Topic: {_topic}, Subscription: {_subscription}");
+            _logger?.LogInformation($"ASB Monitor Starting. Topic: {_topic}, Subscription: {_subscription}");
 
             // Begin listening to the bus topic for any new messages.
-            // The use of a 2 second wait time is arbitrary in this case
+            // The use of a 2 second max wait time is arbitrary in this case
             // and for demo purposes only.
             // Your use case will likely be different.
             var maxWait = TimeSpan.FromSeconds(2);
@@ -89,16 +89,18 @@
                 var message = await reciever.ReceiveMessageAsync(maxWait, stoppingToken);
                 if (message != null)
                 {
+                    _logger?.LogDebug($"ASB Message Recieved: {message.MessageId}");
+
                     this.ProcessMessage(message);
                     await reciever.CompleteMessageAsync(message);
+
+                    _logger?.LogDebug($"ASB Message Completed: {message.MessageId}");
                 }
             }
         }
 
         private void ProcessMessage(ServiceBusReceivedMessage message)
         {
-            _logger?.LogDebug($"Bus Message Recieved: {message.MessageId}");
-
             // deserialize the message back into a Subscription event
             var messageBody = message.Body.ToString();
             var subscriptionEvent = JsonSerializer.Deserialize<SubscriptionEvent>(messageBody, _serializationOptions);
@@ -108,7 +110,6 @@
             // forward the event into the local router so it can be processed by any
             // listening subscription servers (potentially 1 per hosted schema).
             _router.RaiseEvent(subscriptionEvent);
-            _logger?.LogDebug($"Subscription Event Deserialized: {subscriptionEvent.EventName} (Id: {subscriptionEvent.Id})");
         }
     }
 }
