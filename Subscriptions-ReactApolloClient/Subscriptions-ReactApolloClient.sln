@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bakery.API", "src\Bakery.API\Bakery.API.csproj", "{FE312287-743E-41E3-96BD-40D6022E953B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bakery.UI", "src\Bakery.UI\Bakery.UI.csproj", "{8D9E5F2F-C9AD-42CC-B7D8-96A1C2F62762}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{A35E8E7E-1277-466D-9621-0157744A4612}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "graphql-aspnet", "..\..\graphql-aspnet\src\graphql-aspnet\graphql-aspnet.csproj", "{99D79A79-ACB2-4E09-8D8C-EC6692197A72}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "graphql-aspnet-subscriptions", "..\..\graphql-aspnet\src\graphql-aspnet-subscriptions\graphql-aspnet-subscriptions.csproj", "{8D4662DC-9CCD-4FCA-A41A-876DA0EC1A66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE312287-743E-41E3-96BD-40D6022E953B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE312287-743E-41E3-96BD-40D6022E953B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE312287-743E-41E3-96BD-40D6022E953B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE312287-743E-41E3-96BD-40D6022E953B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D9E5F2F-C9AD-42CC-B7D8-96A1C2F62762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D9E5F2F-C9AD-42CC-B7D8-96A1C2F62762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D9E5F2F-C9AD-42CC-B7D8-96A1C2F62762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D9E5F2F-C9AD-42CC-B7D8-96A1C2F62762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99D79A79-ACB2-4E09-8D8C-EC6692197A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99D79A79-ACB2-4E09-8D8C-EC6692197A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99D79A79-ACB2-4E09-8D8C-EC6692197A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99D79A79-ACB2-4E09-8D8C-EC6692197A72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D4662DC-9CCD-4FCA-A41A-876DA0EC1A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4662DC-9CCD-4FCA-A41A-876DA0EC1A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D4662DC-9CCD-4FCA-A41A-876DA0EC1A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D4662DC-9CCD-4FCA-A41A-876DA0EC1A66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99D79A79-ACB2-4E09-8D8C-EC6692197A72} = {A35E8E7E-1277-466D-9621-0157744A4612}
+		{8D4662DC-9CCD-4FCA-A41A-876DA0EC1A66} = {A35E8E7E-1277-466D-9621-0157744A4612}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E519003E-DDCE-4370-9BD4-949B8E1E1265}
+	EndGlobalSection
+EndGlobal
