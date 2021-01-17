@@ -42,11 +42,10 @@
             // update the "database" with the requested changes
             _repo.InsertOrUpdateWidget(widgetData);
 
-            // YOU MUST RAISE THE EVENT FOR LISTENING SUBSCRIPTIONS
-            // TO BE MADE AWARE OF THE CHANGE
             // *********************************************
-            // raise the event internally
-            // all listening subscriptions will be automatically notified
+            // raise the event indicating that the widget was updated.
+            // If you don't call this message, no registered subscriptions
+            // will be notified.
             // *********************************************
             this.PublishSubscriptionEvent(
                 WidgetConstants.WIDGET_INSERTED_OR_ADDED,
