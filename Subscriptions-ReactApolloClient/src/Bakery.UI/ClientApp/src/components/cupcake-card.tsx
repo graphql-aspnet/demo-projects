@@ -4,16 +4,13 @@ import ChocolateImage from '../images/chocolate.svg';
 import VanillaImage from '../images/vanilla.svg';
 import StrawberryImage from '../images/strawberry.svg';
 import PlainImage from '../images/plain.svg';
-import { gql, useMutation } from '@apollo/client';
 
-const PURCHASE_CUPCAKE = gql`
-    mutation BuyCupcake($id: Int!) {
-        purchaseCupcake(id: $id)
-    }
-`;
+type ComponentProps = {
+    cupcake: Cupcake;
+    onCupcakePurchased: (cupcake: number) => void;
+};
 
-const CupcakeCard = function (props: { cupcake: Cupcake }) {
-    const [purchaseCupcake, {}] = useMutation(PURCHASE_CUPCAKE);
+const CupcakeCard = function (props: ComponentProps) {
     const item = props.cupcake;
 
     let imageData: string;
@@ -56,7 +53,7 @@ const CupcakeCard = function (props: { cupcake: Cupcake }) {
                         <button
                             onClick={(e) => {
                                 e.preventDefault();
-                                purchaseCupcake({ variables: { id: item.id } });
+                                props.onCupcakePurchased(item.id);
                             }}
                         >
                             Purchase

@@ -12,7 +12,6 @@
     [GraphRoot]
     public class CupcakesSubscriptionsController : GraphController
     {
-
         [SubscriptionRoot("onCupcakeUpdated", typeof(Cupcake), EventName = PastryConstants.CUPCAKE_UPDATED)]
         public IGraphActionResult CupcakeUpdated(Cupcake eventData, string nameLike = "*")
         {
@@ -21,7 +20,6 @@
 
             return this.Ok();
         }
-
 
         [SubscriptionRoot("onCupcakeSold", typeof(Cupcake), EventName = PastryConstants.CUPCAKE_SOLD)]
         public IGraphActionResult CupcakeSold(Cupcake eventData, string nameLike = "*")

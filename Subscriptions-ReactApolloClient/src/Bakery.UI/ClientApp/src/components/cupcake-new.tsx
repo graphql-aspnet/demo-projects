@@ -1,25 +1,12 @@
 import React, { ChangeEvent, SyntheticEvent, useState } from 'react';
 import { Cupcake, PastryFlavor } from '../model';
 import './cupcake-card.css';
-import { gql, useMutation } from '@apollo/client';
-import { resultKeyNameFromField } from '@apollo/client/utilities';
 
-const ADD_CUPCAKE = gql`
-    mutation AddCupcake($cupcake: Cupcake_Input) {
-        addCupcake(cupcake: $cupcake) {
-            id
-            name
-            quantity
-            flavor
-        }
-    }
-`;
-
-const createCupcake = function (addMethod: any, cakeToAdd: Cupcake) {
-    addMethod({ variables: { cupcake: cakeToAdd } });
+type ComponentProps = {
+    onCupcakeCreated: (cupcake: Cupcake) => void;
 };
 
-const AddCupCake = function () {
+const AddCupCake = function (props: ComponentProps) {
     const emptyCake: Cupcake = {
         id: -1,
         name: '',
@@ -28,7 +15,6 @@ const AddCupCake = function () {
     };
 
     const [state, setState] = useState(emptyCake);
-    const [addCupcakeMutation, {}] = useMutation(ADD_CUPCAKE);
 
     const onInputChange = function (
         event: ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -36,7 +22,11 @@ const AddCupCake = function () {
         const target = event.target;
         let value;
         if (target.name == 'quantity') {
-            value = parseInt(target.value);
+            try {
+                value = parseInt(target.value);
+            } catch {
+                value = state.quantity;
+            }
         } else {
             value = target.value;
         }
@@ -48,6 +38,10 @@ const AddCupCake = function () {
         setState(emptyCake);
     };
 
+    const createCupcake = function (cakeToAdd: Cupcake) {
+        props.onCupcakeCreated(cakeToAdd);
+    };
+
     return (
         <div className="card">
             <div className="card-details">
@@ -55,7 +49,7 @@ const AddCupCake = function () {
                 <form
                     onSubmit={(e) => {
                         e.preventDefault();
-                        createCupcake(addCupcakeMutation, state);
+                        createCupcake(state);
                         resetForm();
                     }}
                 >

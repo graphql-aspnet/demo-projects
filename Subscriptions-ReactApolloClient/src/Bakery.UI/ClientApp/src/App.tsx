@@ -1,9 +1,6 @@
 import React from 'react';
 import './App.css';
 
-import CupcakeList from './components/cupcake-list';
-import { Cupcake, PastryFlavor } from './model';
-
 import { ApolloClient, ApolloProvider } from '@apollo/client';
 import { InMemoryCache, HttpLink } from '@apollo/client';
 import { split } from '@apollo/client';
@@ -22,7 +19,7 @@ const wsLink = new WebSocketLink({
     },
 });
 
-// create a split network link to use web sockets for subscriptions
+// create a split link network layer to use web sockets for subscriptions
 // and http for query and mutations
 const splitLink = split(
     ({ query }) => {
