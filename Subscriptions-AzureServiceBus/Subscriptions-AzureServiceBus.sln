@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryMutation-Server", "src\QueryMutation-Server\QueryMutation-Server.csproj", "{89C238E3-4BD8-4ABF-98D5-6A6410A47C9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subscriptions-Server", "src\Subscriptions-Server\Subscriptions-Server.csproj", "{749B864B-6673-49B4-8AF5-D702D0A19840}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "graphql-aspnet-azure-servicebus-connector", "src\graphql-aspnet-azure-servicebus-connector\graphql-aspnet-azure-servicebus-connector.csproj", "{9D08AACD-911A-4E06-96FC-3E1A223740A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A129DAB1-BB2B-4F87-9DDB-84FDEC05AC99}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "graphql-aspnet-azure-servicebus-connector-tests", "src\graphql-aspnet-azure-servicebus-connector-tests\graphql-aspnet-azure-servicebus-connector-tests.csproj", "{7580AA5C-F76D-4D1A-800B-B9E5634EFC9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CB7E4B7E-9B6A-40FD-97A5-FA63CD3C8EE0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedResources", "src\SharedResources\SharedResources.csproj", "{C6A29704-36F0-425C-8512-3271A3867D24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89C238E3-4BD8-4ABF-98D5-6A6410A47C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89C238E3-4BD8-4ABF-98D5-6A6410A47C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89C238E3-4BD8-4ABF-98D5-6A6410A47C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89C238E3-4BD8-4ABF-98D5-6A6410A47C9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{749B864B-6673-49B4-8AF5-D702D0A19840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{749B864B-6673-49B4-8AF5-D702D0A19840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{749B864B-6673-49B4-8AF5-D702D0A19840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{749B864B-6673-49B4-8AF5-D702D0A19840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D08AACD-911A-4E06-96FC-3E1A223740A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D08AACD-911A-4E06-96FC-3E1A223740A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D08AACD-911A-4E06-96FC-3E1A223740A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D08AACD-911A-4E06-96FC-3E1A223740A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7580AA5C-F76D-4D1A-800B-B9E5634EFC9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7580AA5C-F76D-4D1A-800B-B9E5634EFC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7580AA5C-F76D-4D1A-800B-B9E5634EFC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7580AA5C-F76D-4D1A-800B-B9E5634EFC9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6A29704-36F0-425C-8512-3271A3867D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A29704-36F0-425C-8512-3271A3867D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A29704-36F0-425C-8512-3271A3867D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A29704-36F0-425C-8512-3271A3867D24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7580AA5C-F76D-4D1A-800B-B9E5634EFC9C} = {CB7E4B7E-9B6A-40FD-97A5-FA63CD3C8EE0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6B10D40-CB25-427A-BEA6-99D4C0393148}
+	EndGlobalSection
+EndGlobal

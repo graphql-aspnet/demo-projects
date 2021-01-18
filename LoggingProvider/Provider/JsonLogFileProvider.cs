@@ -1,9 +1,9 @@
 ﻿namespace GraphQL.AspNet.Examples.LoggingProvider.Provider
 {
-    using System;
-    using System.IO;
     using GraphQL.AspNet.Interfaces.Logging;
     using Microsoft.Extensions.Logging;
+    using System;
+    using System.IO;
 
     /// <summary>
     /// <para>A logging provider that will record any <see cref="IGraphLogEntry"/> to
@@ -19,8 +19,6 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonLogFileProvider" /> class.
         /// </summary>
-        /// <param name="localFolder">The local folder to write to. The folder must exist and the application
-        /// must have write permissions to this folder.</param>
         /// <param name="fileName">Name of the file. If not provided a unique filename will be created.</param>
         public JsonLogFileProvider(string fileName)
         {
@@ -47,6 +45,15 @@
         /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
         /// </summary>
         public void Dispose()
+        {
+            this.Dispose(true);
+        }
+
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
+        /// <param name="isDisposing">A value indicating if disposing of resources is indicated.</param>
+        protected virtual void Dispose(bool isDisposing)
         {
         }
     }

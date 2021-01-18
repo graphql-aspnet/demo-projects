@@ -2,11 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>GraphQL.AspNet.Examples.CustomHttpProcessor</RootNamespace>
+    <RootNamespace>GraphQL.AspNet.Examples.ReactApollo</RootNamespace>
   </PropertyGroup>
+
 
   <ItemGroup>
     <PackageReference Include="GraphQL.AspNet" Version="0.5.0-beta" />
+    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.5.0-beta" />
   </ItemGroup>
-
 </Project>
