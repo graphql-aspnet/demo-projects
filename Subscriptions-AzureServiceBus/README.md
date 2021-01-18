@@ -49,7 +49,7 @@ The event will be published to the service bus and consumed by the `Subscription
 
 
 ### Service Bus Connector Project
-The `graphql-aspnet-azure-servicebus-connector.csproj` project contains the custom subscription publisher need to push events to the ASB as well as the background hosted service used by `Subscriptions-Server` to listen for events on an ASB topic. How these components are registered is shown in the `startup.cs` files of each server project
+The `graphql-aspnet-azure-servicebus-connector.csproj` project contains the custom `ISubscriptionEventPublisher` needed to push events to the ASB as well as the hosted service used by `Subscriptions-Server` to listen for events on an ASB topic. How these components are registered is shown in the `startup.cs` files of each server project
 
 
-**Disclaimer:** Scalability is not a trivial subject. This project is only a demo to show how one can pass information through a message broker like Azure Service Bus to enable scalability. How you consume this data; the topics, subscriptions, message routing rules, dequeueing rules, serialization and deserialziation of events are all very complex topics that you'll need to address individually to achieve your goals.
+**Disclaimer:** Scalability is not a trivial subject. This project is only a demo to show how one can pass information through a message broker like Azure Service Bus to enable scalability. How you consume this data; the topics, subscriptions, routing rules, dequeueing rules, serialization and deserialziation of data are all very complex topics that you'll need to address individually based on your needs.
