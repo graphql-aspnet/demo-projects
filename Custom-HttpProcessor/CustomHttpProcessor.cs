@@ -19,17 +19,15 @@
         /// Initializes a new instance of the <see cref="CustomHttpProcessor"/> class.
         /// </summary>
         /// <param name="schema">The schema instance.</param>
-        /// <param name="queryPipeline">The query pipeline to submit requests to.</param>
+        /// <param name="graphqlRunTime">The graphql runtime for the schema.</param>
         /// <param name="writer">The serializer to turn a response into json.</param>
-        /// <param name="metricsFactory">The metrics factory to supply profiling packages to incoming queries.</param>
         /// <param name="logger">The logger instance to use for recording events.</param>
         public CustomHttpProcessor(
             GraphSchema schema,
-            ISchemaPipeline<GraphSchema, GraphQueryExecutionContext> queryPipeline,
+            IGraphQLRuntime<GraphSchema> graphqlRunTime,
             IGraphResponseWriter<GraphSchema> writer,
-            IGraphQueryExecutionMetricsFactory<GraphSchema> metricsFactory,
             IGraphEventLogger logger = null)
-            : base(schema, queryPipeline, writer, metricsFactory, logger)
+            : base(schema, graphqlRunTime, writer, logger)
         {
         }
 
