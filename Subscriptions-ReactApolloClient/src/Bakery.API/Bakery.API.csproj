@@ -5,10 +5,9 @@
     <RootNamespace>GraphQL.AspNet.Examples.ReactApollo</RootNamespace>
   </PropertyGroup>
 
+
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\graphql-aspnet\src\graphql-aspnet-subscriptions\graphql-aspnet-subscriptions.csproj" />
-    <ProjectReference Include="..\..\..\..\graphql-aspnet\src\graphql-aspnet\graphql-aspnet.csproj" />
+    <PackageReference Include="GraphQL.AspNet" Version="0.5.0-beta" />
+    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.5.0-beta" />
   </ItemGroup>
-
-
 </Project>

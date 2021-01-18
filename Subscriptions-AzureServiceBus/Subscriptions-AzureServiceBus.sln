@@ -5,20 +5,16 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryMutation-Server", "src\QueryMutation-Server\QueryMutation-Server.csproj", "{89C238E3-4BD8-4ABF-98D5-6A6410A47C9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subscriptions-Server", "src\Subscriptions-Server\Subscriptions-Server.csproj", "{749B864B-6673-49B4-8AF5-D702D0A19840}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subscriptions-Server", "src\Subscriptions-Server\Subscriptions-Server.csproj", "{749B864B-6673-49B4-8AF5-D702D0A19840}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graphql-aspnet-azure-servicebus-connector", "src\graphql-aspnet-azure-servicebus-connector\graphql-aspnet-azure-servicebus-connector.csproj", "{9D08AACD-911A-4E06-96FC-3E1A223740A4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "graphql-aspnet", "..\..\graphql-aspnet\src\graphql-aspnet\graphql-aspnet.csproj", "{28B1C407-8077-4334-922D-E19857616CFB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "graphql-aspnet-subscriptions", "..\..\graphql-aspnet\src\graphql-aspnet-subscriptions\graphql-aspnet-subscriptions.csproj", "{25F8BC1A-2B33-4099-B84E-712A61E464FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "graphql-aspnet-azure-servicebus-connector", "src\graphql-aspnet-azure-servicebus-connector\graphql-aspnet-azure-servicebus-connector.csproj", "{9D08AACD-911A-4E06-96FC-3E1A223740A4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A129DAB1-BB2B-4F87-9DDB-84FDEC05AC99}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graphql-aspnet-azure-servicebus-connector-tests", "src\graphql-aspnet-azure-servicebus-connector-tests\graphql-aspnet-azure-servicebus-connector-tests.csproj", "{7580AA5C-F76D-4D1A-800B-B9E5634EFC9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "graphql-aspnet-azure-servicebus-connector-tests", "src\graphql-aspnet-azure-servicebus-connector-tests\graphql-aspnet-azure-servicebus-connector-tests.csproj", "{7580AA5C-F76D-4D1A-800B-B9E5634EFC9C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CB7E4B7E-9B6A-40FD-97A5-FA63CD3C8EE0}"
 EndProject
@@ -42,14 +38,6 @@ Global
 		{9D08AACD-911A-4E06-96FC-3E1A223740A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D08AACD-911A-4E06-96FC-3E1A223740A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D08AACD-911A-4E06-96FC-3E1A223740A4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28B1C407-8077-4334-922D-E19857616CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28B1C407-8077-4334-922D-E19857616CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28B1C407-8077-4334-922D-E19857616CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28B1C407-8077-4334-922D-E19857616CFB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{25F8BC1A-2B33-4099-B84E-712A61E464FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25F8BC1A-2B33-4099-B84E-712A61E464FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25F8BC1A-2B33-4099-B84E-712A61E464FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25F8BC1A-2B33-4099-B84E-712A61E464FE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7580AA5C-F76D-4D1A-800B-B9E5634EFC9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7580AA5C-F76D-4D1A-800B-B9E5634EFC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7580AA5C-F76D-4D1A-800B-B9E5634EFC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
