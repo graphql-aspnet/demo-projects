@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreApp3.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>GraphQL.AspNet.AzureServiceBus</RootNamespace>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -9,12 +9,14 @@
   <ItemGroup>
     <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="5.0.0" />
     <PackageReference Include="System.Text.Json" Version="4.7.2" />
   </ItemGroup>
 
+
   <ItemGroup>
-    <PackageReference Include="GraphQL.AspNet" Version="0.5.0-beta" />
-    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.5.0-beta" />
+    <PackageReference Include="GraphQL.AspNet" Version="0.5.1-beta" />
+    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.5.1-beta" />
   </ItemGroup>
 
 </Project>
