@@ -59,7 +59,7 @@ namespace GraphQL.AspNet.Examples.ReactApollo
             services.AddGraphQL()
                     .AddSubscriptions(options =>
                     {
-                        options.RequiredAuthenticatedConnection = false;
+                        options.AuthenticatedRequestsOnly = false;
 
                         // some graphql tools have a very low threshold for disconnecting a subscription
                         // when idle.  Set the server-sent keep alive value to a low interval
