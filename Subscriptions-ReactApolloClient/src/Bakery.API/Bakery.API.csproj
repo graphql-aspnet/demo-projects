@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraphQL.AspNet" Version="0.5.1-beta" />
-    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.5.1-beta" />
+    <PackageReference Include="GraphQL.AspNet" Version="0.6.0-beta" />
+    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.6.0-beta" />
   </ItemGroup>
 
 </Project>
