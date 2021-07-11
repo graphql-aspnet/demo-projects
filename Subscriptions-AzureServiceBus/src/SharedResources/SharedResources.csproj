@@ -7,11 +7,13 @@
 
   <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+
   </ItemGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="GraphQL.AspNet" Version="0.5.1-beta" />
-    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.5.1-beta" />
+    <PackageReference Include="GraphQL.AspNet" Version="0.6.1-beta" />
+    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.6.1-beta" />
   </ItemGroup>
+
 </Project>
