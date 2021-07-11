@@ -13,10 +13,9 @@
     <PackageReference Include="System.Text.Json" Version="4.7.2" />
   </ItemGroup>
 
-
   <ItemGroup>
-    <PackageReference Include="GraphQL.AspNet" Version="0.6.0-beta" />
-    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.6.0-beta" />
+    <PackageReference Include="GraphQL.AspNet" Version="0.6.1-beta" />
+    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.6.1-beta" />
   </ItemGroup>
 
 </Project>
