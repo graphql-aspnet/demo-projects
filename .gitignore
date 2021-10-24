@@ -8,6 +8,9 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.[Ll]ocal.sln
+*.[Ll]ocal.csproj
+
 appsettings.[Dd]evelopment.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
