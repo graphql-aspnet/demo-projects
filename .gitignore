@@ -12,6 +12,8 @@
 *.[Ll]ocal.csproj
 
 appsettings.[Dd]evelopment.json
+*.[Ll]ocal.csproj
+*.[Ll]ocal.sln
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
