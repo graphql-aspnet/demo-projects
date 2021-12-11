@@ -67,7 +67,7 @@ const Bakery = () => {
     const queryRequest = useQuery(GET_CUPCAKES, {
         onCompleted: (data) => {
             const newState: CupcakeState = {
-                cupcakeList: [...state.cupcakeList, ...data.cupcakes.search],
+                cupcakeList: [...data.cupcakes.search],
             };
             setCupcakes(newState);
         },
@@ -114,7 +114,7 @@ const Bakery = () => {
     });
 
     // two local functions (based to child components)
-    // to handle purhcases and creation of new cupcakes
+    // to handle purchases and creation of new cupcakes
     const onCupcakeCreated = (cupcake: Cupcake) => {
         addNewCupcake({ variables: { cupcake: cupcake } });
     };
