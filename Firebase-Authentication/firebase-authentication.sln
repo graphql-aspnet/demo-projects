@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "graphql-aspnet", "..\..\graphql-aspnet\src\graphql-aspnet\graphql-aspnet.csproj", "{FB11293C-45E3-4622-9B82-F638EBAC3E03}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "firebase-authentication", "firebase-authentication\firebase-authentication.csproj", "{E2A74729-D106-49CA-9BFA-E008A11EF5A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "firebase-authentication", "firebase-authentication\Firebase-Authentication.csproj", "{E2A74729-D106-49CA-9BFA-E008A11EF5A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

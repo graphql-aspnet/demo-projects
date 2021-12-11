@@ -38,7 +38,7 @@ Before we can consume an access token in our graphql project we first need to se
   "firebaseProjectId":  "graphql-aspnet-demo"
 }
 ```
-## **6. Obtain a JWT access_token for your user**
+## **6. Obtain a token for your user**
  - Open your http tester of choice, such as [Postman](https://www.postman.com/).
  - Issue a POST request to the below URL and with the following body to obtain a JWT access token for your test user
    - Be sure to add your specific api key in the url
@@ -64,7 +64,7 @@ POST: "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key
 # Make a Donut
 - Run the demo project and execute the following query in a tool of your choice
 
-Use a GraphQL tool submit the graphql requests. Don't forget to include the authorization header with the bearer token obtained from step 6 above.
+Use a GraphQL tool submit the following request. Don't forget to include the authorization header with the bearer token obtained from step 6 above.
 
 ```graphql
 query {
