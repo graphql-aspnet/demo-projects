@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraphQL.AspNet" Version="0.9.0-beta" />
-    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.9.0-beta" />
+    <PackageReference Include="GraphQL.AspNet" Version="0.9.1-beta" />
+    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.9.1-beta" />
   </ItemGroup>
 
 </Project>
