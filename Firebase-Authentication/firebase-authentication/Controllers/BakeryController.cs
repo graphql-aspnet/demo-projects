@@ -34,7 +34,7 @@
         public Donut CreateANewDonut()
         {
             var userId = this.User.Claims.FirstOrDefault(x => x.Type == "user_id")?.Value;
-            var newDonut = _donuts[_rando.Next(0, 2)].MadeFor(userId);
+            var newDonut = _donuts[_rando.Next(0, _donuts.Count)].MadeFor(userId);
             return newDonut;
         }
 
@@ -49,7 +49,7 @@
             // you may get a 500 ERROR and an exception thrown indicating that the authentication
             // scheme is not registered to the application.
             var userId = this.User.Claims.FirstOrDefault(x => x.Type == "user_id")?.Value;
-            var newCookie = _cookies[_rando.Next(0, 1)].MadeFor(userId);
+            var newCookie = _cookies[_rando.Next(0, _cookies.Count)].MadeFor(userId);
             return newCookie;
         }
     }
