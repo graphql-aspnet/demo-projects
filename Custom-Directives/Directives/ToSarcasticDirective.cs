@@ -19,7 +19,7 @@
         /// in a query document.
         /// </summary>
         [DirectiveLocations(DirectiveLocation.FIELD)]
-        public IGraphActionResult Execute()
+        public IGraphActionResult Execute(bool startOnLowerCase = true)
         {
             // for directives executing during query execution
             // DirectiveTarget will be the resolved field value
@@ -32,8 +32,7 @@
                 var builder = new StringBuilder();
                 var data = this.DirectiveTarget.ToString();
 
-                // randomly choose to start with lower case or upper case
-                var oddOrEven = DateTime.UtcNow.Second % 2 == 0 ? 0 : 1;
+                var oddOrEven = startOnLowerCase ? 0 : 1;
 
                 for (var i = 0; i < data.Length; i++)
                 {
