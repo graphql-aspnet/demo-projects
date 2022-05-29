@@ -2,7 +2,9 @@ namespace GraphQL.AspNet.Examples.LoggingProvider
 {
     using System.IO;
     using GraphQL.AspNet.Configuration.Mvc;
+    using GraphQL.AspNet.Examples.LoggingProvider.Model;
     using GraphQL.AspNet.Examples.LoggingProvider.Provider;
+    using GraphQL.AspNet.Interfaces.TypeSystem;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
@@ -58,7 +60,15 @@ namespace GraphQL.AspNet.Examples.LoggingProvider
             services.AddControllers();
 
             // make sure to register graphql AFTER adding logging
-            services.AddGraphQL();
+            services.AddGraphQL(o =>
+            {
+                o.ApplyDirective<ToUpperDirective>()
+                    .ToItems(x =>
+                        x is IGraphField gf
+                        && gf.Name == "name"
+                        && gf.Parent is ITypedSchemaItem ti
+                        && ti.ObjectType == typeof(Donut));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

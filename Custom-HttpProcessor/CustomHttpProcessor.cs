@@ -1,6 +1,7 @@
 ﻿namespace GraphQL.AspNet.Examples.CustomHttpProcessor
 {
     using System;
+    using System.Threading;
     using System.Threading.Tasks;
     using GraphQL.AspNet.Defaults;
     using GraphQL.AspNet.Interfaces.Engine;
@@ -35,8 +36,9 @@
         /// Submits the GraphQL query for processing.
         /// </summary>
         /// <param name="queryData">The query data.</param>
+        /// <param name="cancelToken">The cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
-        public override Task SubmitGraphQLQuery(GraphQueryData queryData)
+        public override Task SubmitGraphQLQuery(GraphQueryData queryData, CancellationToken cancelToken = default)
         {
             // Deny ALL graph ql requests from being sent to a client between 1am and 4am
             // Place a breakpoint here and/or alter the hours to see that its being invoked.
