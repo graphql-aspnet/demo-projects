@@ -2,12 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>GraphQL.AspNet.Examples.Authorization</RootNamespace>
+    <RootNamespace>GraphQL.AspNet.Examples.CustomDirectives</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="GraphQL.AspNet" Version="0.10.0-beta" />
-    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
   </ItemGroup>
 
 </Project>

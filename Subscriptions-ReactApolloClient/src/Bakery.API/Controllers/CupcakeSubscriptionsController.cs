@@ -1,13 +1,10 @@
 ﻿namespace GraphQL.AspNet.Examples.ReactApollo.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
     using GraphQL.AspNet.Attributes;
     using GraphQL.AspNet.Controllers;
     using GraphQL.AspNet.Examples.ReactApollo.Model;
     using GraphQL.AspNet.Interfaces.Controllers;
+    using System;
 
     [GraphRoot]
     public class CupcakesSubscriptionsController : GraphController

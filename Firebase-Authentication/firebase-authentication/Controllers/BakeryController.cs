@@ -45,7 +45,7 @@
             // Authorization to this method specifically requires use
             // of a "Bearer" authentication scheme
             //
-            // Note that you supply a scheme of an authentication method that is not registered
+            // Note that if you supply a scheme of an authentication method that is not registered
             // you may get a 500 ERROR and an exception thrown indicating that the authentication
             // scheme is not registered to the application.
             var userId = this.User.Claims.FirstOrDefault(x => x.Type == "user_id")?.Value;

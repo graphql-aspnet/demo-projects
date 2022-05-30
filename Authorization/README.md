@@ -2,7 +2,7 @@
 
 This example project shows how to implement custom authorization using a mocked user store with ASP.NET Identity. The concept is the same regardless of your chosen authentication provider. 
 
-* _Project Type_: ASP.NET Core 3.0
+* _Project Type_: .NET 5.0
 * _Solution:_ `GraphQL-Authorization.sln`
 
 
