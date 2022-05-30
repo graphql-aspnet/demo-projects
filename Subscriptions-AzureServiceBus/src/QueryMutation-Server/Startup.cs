@@ -87,7 +87,7 @@ namespace GraphQL.AspNet.Examples.Subscriptions.QueryMutationServer
             {
                 // register all controllers found in the shared assembly
                 // so as to complete the full introspection documentation
-                options.AddGraphAssembly(typeof(WidgetQueryController).Assembly);
+                options.AddAssembly(typeof(WidgetQueryController).Assembly);
             })
             .AddSubscriptionPublishing();
         }

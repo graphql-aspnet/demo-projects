@@ -70,7 +70,7 @@ namespace GraphQL.AspNet.Examples.CustomDirectives
                 //
                 o.ApplyDirective<ToUpperDirective>()
                     .WithArguments(new object[0])
-                    .ToItems(x => x.IsFieldOf<Donut>("name"));
+                    .ToItems(x => x.IsField<Donut>("name"));
             });
         }
 

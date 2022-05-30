@@ -84,7 +84,7 @@ namespace GraphQL.AspNet.Examples.Subscriptions.SubscriptionServer
             // with our customer listener that is listening to an Azure service bus topic.
             services.AddGraphQL((options) =>
             {
-                options.AddGraphAssembly(typeof(WidgetSubscriptionController).Assembly);
+                options.AddAssembly(typeof(WidgetSubscriptionController).Assembly);
             })
             .AddSubscriptionServer(options =>
             {
