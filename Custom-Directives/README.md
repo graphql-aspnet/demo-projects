@@ -39,7 +39,7 @@ The method you choose to apply your type system directives largely depends on yo
 
 ##  Execution Directive: @toSarcastic
 
-Execution directives are applied to query documents at run time to have various effects on the fields of the query.  In this example we apply the `@toSarcastic` directive to convert the name to `sArCaTiC cAsInG`.  Try this query in your favorite query tool:
+Execution directives are applied to query documents at run time and may affect the query in a number of ways.  In this example we apply the `@toSarcastic` directive to extend the field resolver and change the name to `sArCaTiC cAsInG`.  Try this query in your favorite query tool:
 
 ```graphql
 query {

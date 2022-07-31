@@ -21,13 +21,17 @@
         [DirectiveLocations(DirectiveLocation.FIELD)]
         public IGraphActionResult Execute(bool startOnLowerCase = true)
         {
+            // this directives targets a field in a query document
+            // represented by the IFieldDocumentPart
             var fieldPart = this.DirectiveTarget as IFieldDocumentPart;
             if (fieldPart != null)
             {
                 if (fieldPart.Field?.ObjectType != typeof(string))
                     throw new Exception("ONLY STRINGS!"); // - hulk
 
-                // extend the resolver to include sarcastic casing
+                // A post processor is an additional field resolver executed
+                // immediately after the field's primary resolver finishes
+                // executing
                 fieldPart.PostProcessor = CreateResolver(startOnLowerCase);
             }
 
