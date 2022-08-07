@@ -5,7 +5,7 @@
     "anonymousAuthentication": true
   },
   "profiles": {
-    "LoggingProvider": {
+    "Custom-Directives": {
       "commandName": "Project",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {

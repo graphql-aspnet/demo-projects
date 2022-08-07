@@ -19,7 +19,7 @@
             _cupcakeService = new CupcakeService();
         }
 
-        [Mutation("updateCupcake", typeof(Cupcake))]
+        [Mutation("updateCupcake", typeof(bool))]
         public IGraphActionResult UpdateCupcake(Cupcake cupcake)
         {
             if (!this.ModelState.IsValid)
@@ -30,10 +30,10 @@
                 return this.BadRequest("Cupcake not found");
 
             this.PublishSubscriptionEvent(PastryConstants.CUPCAKE_UPDATED, updatedCake);
-            return this.Ok(updatedCake);
+            return this.Ok(true);
         }
 
-        [Mutation("addCupcake", typeof(Cupcake))]
+        [Mutation("addCupcake", typeof(bool))]
         public IGraphActionResult AddCupcake(Cupcake cupcake)
         {
             if (!this.ModelState.IsValid)
@@ -44,7 +44,7 @@
                 return this.BadRequest("Error creating the new cupcake");
 
             this.PublishSubscriptionEvent(PastryConstants.CUPCAKE_CREATED, updatedCake);
-            return this.Ok(updatedCake);
+            return this.Ok(true);
         }
 
         [Mutation("purchaseCupcake", typeof(bool))]

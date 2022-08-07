@@ -42,10 +42,10 @@
         {
             // Deny ALL graph ql requests from being sent to a client between 1am and 4am
             // Place a breakpoint here and/or alter the hours to see that its being invoked.
-            if (DateTime.UtcNow.Hour >= 1 && DateTime.UtcNow.Hour <= 4)
+            if ((DateTime.UtcNow.Second % 2) == 0)
             {
                 var response = this.ErrorMessageAsGraphQLResponse(
-                    "This service denys all queries between 1am and 4am (UTC-0). We're making the donuts!");
+                    "This service denys all queries on even seconds while we check the drive through lane.");
 
                 return this.WriteResponse(response);
             }
