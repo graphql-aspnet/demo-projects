@@ -32,7 +32,7 @@
                 // A post processor is an additional field resolver executed
                 // immediately after the field's primary resolver finishes
                 // executing
-                fieldPart.PostProcessor = CreateResolver(startOnLowerCase);
+                fieldPart.PostResolver = CreateResolver(startOnLowerCase);
             }
 
             return this.Ok();

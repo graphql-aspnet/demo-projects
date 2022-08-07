@@ -45,7 +45,7 @@
             if ((DateTime.UtcNow.Second % 2) == 0)
             {
                 var response = this.ErrorMessageAsGraphQLResponse(
-                    "This service denys all queries between on even seconds while we check the drive through lane.");
+                    "This service denys all queries on even seconds while we check the drive through lane.");
 
                 return this.WriteResponse(response);
             }
