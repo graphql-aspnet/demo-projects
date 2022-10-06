@@ -1,10 +1,9 @@
 {
-    "extends": ["prettier"],
-    "plugins": ["prettier"],
-    "rules": {
-      "prettier/prettier": [
-          "error",
-          {" endOfLine": "auto" }
-      ]
-    }
-  }
+  "extends": [
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {}
+}

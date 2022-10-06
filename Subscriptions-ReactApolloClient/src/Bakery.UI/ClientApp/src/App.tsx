@@ -4,20 +4,19 @@ import './App.css';
 import { ApolloClient, ApolloProvider } from '@apollo/client';
 import { InMemoryCache, HttpLink } from '@apollo/client';
 import { split } from '@apollo/client';
-import { WebSocketLink } from '@apollo/client/link/ws';
 import { getMainDefinition } from '@apollo/client/utilities';
+import { GraphQLWsLink } from '@apollo/client/link/subscriptions';
+import { createClient } from 'graphql-ws';
 import Bakery from './components/bakery';
 
 const httpLink = new HttpLink({
     uri: 'http://localhost:5001/graphql',
 });
 
-const wsLink = new WebSocketLink({
-    uri: `ws://localhost:5001/graphql`,
-    options: {
-        reconnect: true,
-    },
-});
+// configure for graphql-transport-ws protocol
+const wsLink = new GraphQLWsLink(createClient({
+    url: 'ws://localhost:5001/graphql',
+}));
 
 // create a split link network layer to use web sockets for subscriptions
 // and http for query and mutations
@@ -34,8 +33,8 @@ const splitLink = split(
 );
 
 const client = new ApolloClient({
-    cache: new InMemoryCache(),
     link: splitLink,
+    cache: new InMemoryCache(),
 });
 
 function App() {
