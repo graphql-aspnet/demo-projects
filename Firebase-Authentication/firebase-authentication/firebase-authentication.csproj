@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.12" />
-	<PackageReference Include="GraphQL.AspNet" Version="0.12.0-beta" />
+	<PackageReference Include="GraphQL.AspNet" Version="0.13.0-beta" />
   </ItemGroup>
 
 </Project>
