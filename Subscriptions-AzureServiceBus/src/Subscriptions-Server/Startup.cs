@@ -94,7 +94,7 @@ namespace GraphQL.AspNet.Examples.Subscriptions.SubscriptionServer
                 // when idle.  Set the server-sent keep alive value to a low interval
                 // to force them to keep the connection alive.
                 // in production the value you would use would be dependent on your needs.
-                options.KeepAliveInterval = TimeSpan.FromMilliseconds(500);
+                options.ConnectionKeepAliveInterval = TimeSpan.FromMilliseconds(500);
             });
         }
 

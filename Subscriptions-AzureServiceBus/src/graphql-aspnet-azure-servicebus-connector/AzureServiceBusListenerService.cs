@@ -91,7 +91,7 @@
                 {
                     _logger?.LogDebug($"ASB Message Recieved: {message.MessageId}");
 
-                    this.ProcessMessage(message);
+                    this.ProcessMessage(message, stoppingToken);
                     await reciever.CompleteMessageAsync(message);
 
                     _logger?.LogDebug($"ASB Message Completed: {message.MessageId}");
@@ -99,7 +99,7 @@
             }
         }
 
-        private void ProcessMessage(ServiceBusReceivedMessage message)
+        private void ProcessMessage(ServiceBusReceivedMessage message, CancellationToken cancelToken = default)
         {
             // deserialize the message back into a Subscription event
             var messageBody = message.Body.ToString();
@@ -109,7 +109,7 @@
 
             // forward the event into the local router so it can be processed by any
             // listening subscription servers (potentially 1 per hosted schema).
-            _router.RaiseEvent(subscriptionEvent);
+            _router.RaisePublishedEvent(subscriptionEvent);
         }
     }
 }
