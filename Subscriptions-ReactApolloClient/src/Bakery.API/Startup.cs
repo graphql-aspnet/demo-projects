@@ -10,6 +10,7 @@ namespace GraphQL.AspNet.Examples.ReactApollo
     public class Startup
     {
         private const string ALL_ORIGINS_POLICY = "_allOrigins";
+        private static TimeSpan KEEP_ALIVE_INTERVAL = TimeSpan.FromMilliseconds(10000);
 
         public Startup(IConfiguration configuration)
         {
@@ -52,7 +53,7 @@ namespace GraphQL.AspNet.Examples.ReactApollo
                 // when idle.  Set the server-sent keep alive value to a low interval
                 // to force them to keep the connection alive.
                 // in production the value you would use would be dependent on your needs.
-                options.KeepAliveInterval = TimeSpan.FromMilliseconds(10000);
+                options.KeepAliveInterval = KEEP_ALIVE_INTERVAL;
             });
 
             services.AddControllers();
@@ -65,7 +66,7 @@ namespace GraphQL.AspNet.Examples.ReactApollo
                         // when idle.  Set the server-sent keep alive value to a low interval
                         // to force them to keep the connection alive.
                         // in production the value you would use would be dependent on your needs.
-                        options.KeepAliveInterval = TimeSpan.FromMilliseconds(10000);
+                        options.ConnectionKeepAliveInterval = KEEP_ALIVE_INTERVAL;
                     });
         }
 
