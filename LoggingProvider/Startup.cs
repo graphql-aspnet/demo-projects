@@ -1,16 +1,16 @@
 namespace GraphQL.AspNet.Examples.LoggingProvider
 {
-    using System.IO;
     using GraphQL.AspNet.Configuration.Mvc;
     using GraphQL.AspNet.Examples.LoggingProvider.Model;
     using GraphQL.AspNet.Examples.LoggingProvider.Provider;
-    using GraphQL.AspNet.Interfaces.TypeSystem;
+    using GraphQL.AspNet.Interfaces.Schema;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Extensions.Logging;
+    using System.IO;
 
     public class Startup
     {
@@ -40,7 +40,6 @@ namespace GraphQL.AspNet.Examples.LoggingProvider
                         .AllowAnyMethod();
                     });
             });
-
 
             // -------------------------------------------
             // The file where the logs will be written

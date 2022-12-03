@@ -1,14 +1,12 @@
 ﻿namespace GraphQL.AspNet.Examples.CustomHttpProcessor
 {
+    using GraphQL.AspNet.Engine;
+    using GraphQL.AspNet.Interfaces.Engine;
+    using GraphQL.AspNet.Interfaces.Logging;
+    using GraphQL.AspNet.Schemas;
     using System;
     using System.Threading;
     using System.Threading.Tasks;
-    using GraphQL.AspNet.Defaults;
-    using GraphQL.AspNet.Interfaces.Engine;
-    using GraphQL.AspNet.Interfaces.Logging;
-    using GraphQL.AspNet.Interfaces.Middleware;
-    using GraphQL.AspNet.Middleware.QueryExecution;
-    using GraphQL.AspNet.Schemas;
 
     /// <summary>
     /// A custom Http Processor that recieves the raw <see cref="HttpContext"/> and intercepts the query
@@ -26,7 +24,7 @@
         public CustomHttpProcessor(
             GraphSchema schema,
             IGraphQLRuntime<GraphSchema> graphqlRunTime,
-            IGraphResponseWriter<GraphSchema> writer,
+            IGraphQueryResponseWriter<GraphSchema> writer,
             IGraphEventLogger logger = null)
             : base(schema, graphqlRunTime, writer, logger)
         {

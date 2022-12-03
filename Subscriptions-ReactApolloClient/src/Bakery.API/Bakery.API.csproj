@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>GraphQL.AspNet.Examples.ReactApollo</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraphQL.AspNet" Version="0.13.0-beta" />
-    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.13.0-beta" />
+    <PackageReference Include="GraphQL.AspNet" Version="0.14.0-beta" />
+    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="0.14.0-beta" />
   </ItemGroup>
 
 </Project>
