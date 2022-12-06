@@ -2,13 +2,13 @@
 {
     using GraphQL.AspNet.Attributes;
     using GraphQL.AspNet.Directives;
+    using GraphQL.AspNet.Execution;
     using GraphQL.AspNet.Execution.Contexts;
     using GraphQL.AspNet.Interfaces.Controllers;
-    using GraphQL.AspNet.Interfaces.TypeSystem;
+    using GraphQL.AspNet.Interfaces.Schema;
     using GraphQL.AspNet.Schemas.TypeSystem;
     using System.Threading;
     using System.Threading.Tasks;
-    using GraphQL.AspNet.Execution;
 
     public class ToUpperDirective : GraphDirective
     {
