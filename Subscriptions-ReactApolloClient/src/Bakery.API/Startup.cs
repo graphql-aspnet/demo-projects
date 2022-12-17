@@ -1,7 +1,7 @@
 namespace GraphQL.AspNet.Examples.ReactApollo
 {
     using System;
-    using GraphQL.AspNet.Configuration.Mvc;
+    using GraphQL.AspNet.Configuration;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.WebSockets;
     using Microsoft.Extensions.Configuration;

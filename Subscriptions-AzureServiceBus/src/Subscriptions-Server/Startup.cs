@@ -3,7 +3,7 @@ namespace GraphQL.AspNet.Examples.Subscriptions.SubscriptionServer
     using System;
     using System.Diagnostics;
     using GraphQL.AspNet.AzureServiceBus;
-    using GraphQL.AspNet.Configuration.Mvc;
+    using GraphQL.AspNet.Configuration;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.WebSockets;

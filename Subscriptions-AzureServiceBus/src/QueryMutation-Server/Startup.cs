@@ -1,23 +1,18 @@
 namespace GraphQL.AspNet.Examples.Subscriptions.QueryMutationServer
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
+    using GraphQL.AspNet.AzureServiceBus;
+    using GraphQL.AspNet.Configuration;
+    using GraphQL.AspNet.Configuration.Exceptions;
+    using GraphQL.AspNet.Interfaces.Subscriptions;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
-    using GraphQL.AspNet.Configuration.Mvc;
-    using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Extensions.Logging;
-    using GraphQL.AspNet.Interfaces.Subscriptions;
-    using GraphQL.AspNet.AzureServiceBus;
-    using GraphQL.AspNet.Configuration.Exceptions;
-    using System.Diagnostics;
-    using GraphQL.AspNet.Schemas;
     using MutationSubscription_Server.Controllers;
+    using System;
+    using System.Diagnostics;
 
     public class Startup
     {

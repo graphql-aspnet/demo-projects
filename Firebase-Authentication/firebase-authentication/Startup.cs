@@ -1,6 +1,6 @@
 namespace Firebase.AuthTest
 {
-    using GraphQL.AspNet.Configuration.Mvc;
+    using GraphQL.AspNet.Configuration;
     using Microsoft.AspNetCore.Authentication.JwtBearer;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;

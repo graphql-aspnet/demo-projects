@@ -1,6 +1,6 @@
 namespace GraphQL.AspNet.Examples.CustomHttpProcessor
 {
-    using GraphQL.AspNet.Configuration.Mvc;
+    using GraphQL.AspNet.Configuration;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;

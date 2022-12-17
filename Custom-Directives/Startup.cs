@@ -1,7 +1,7 @@
 namespace GraphQL.AspNet.Examples.CustomDirectives
 {
     using GraphQL.AspNet.Configuration;
-    using GraphQL.AspNet.Configuration.Mvc;
+    using GraphQL.AspNet.Configuration;
     using GraphQL.AspNet.Examples.CustomDirectives.Directives;
     using GraphQL.AspNet.Examples.CustomDirectives.Model;
     using Microsoft.AspNetCore.Builder;
