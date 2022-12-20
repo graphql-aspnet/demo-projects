@@ -10,8 +10,8 @@
     using Azure.Messaging.ServiceBus;
     using GraphQL.AspNet.AzureServiceBus.Serializers;
     using GraphQL.AspNet.Common;
-    using GraphQL.AspNet.Execution.Subscriptions;
     using GraphQL.AspNet.Interfaces.Subscriptions;
+    using GraphQL.AspNet.SubscriptionServer;
     using Microsoft.Extensions.Logging;
 
     /// <summary>

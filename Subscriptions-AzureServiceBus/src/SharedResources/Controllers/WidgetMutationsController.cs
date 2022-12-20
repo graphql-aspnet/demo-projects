@@ -1,15 +1,9 @@
-﻿namespace MutationSubscription_Server.Controllers
+﻿namespace GraphQL.AspNet.Examples.Subscriptions.DataModel.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
     using GraphQL.AspNet.Attributes;
     using GraphQL.AspNet.Controllers;
     using GraphQL.AspNet.Examples.Subscriptions.DataModel;
     using GraphQL.AspNet.Interfaces.Controllers;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Logging;
 
     /// <summary>
     /// A controller containing a method to update a widget's data in the "datbase".
@@ -36,8 +30,8 @@
         public IGraphActionResult UpdateWidget(Widget widgetData)
         {
             // validation
-            if (!this.ModelState.IsValid)
-                return this.BadRequest(this.ModelState);
+            if (!ModelState.IsValid)
+                return this.BadRequest(ModelState);
 
             // update the "database" with the requested changes
             _repo.InsertOrUpdateWidget(widgetData);

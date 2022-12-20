@@ -3,6 +3,7 @@ namespace GraphQL.AspNet.Examples.Subscriptions.QueryMutationServer
     using GraphQL.AspNet.AzureServiceBus;
     using GraphQL.AspNet.Configuration;
     using GraphQL.AspNet.Configuration.Exceptions;
+    using GraphQL.AspNet.Examples.Subscriptions.DataModel.Controllers;
     using GraphQL.AspNet.Interfaces.Subscriptions;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -10,7 +11,6 @@ namespace GraphQL.AspNet.Examples.Subscriptions.QueryMutationServer
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Extensions.Logging;
-    using MutationSubscription_Server.Controllers;
     using System;
     using System.Diagnostics;
 

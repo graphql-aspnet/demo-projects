@@ -4,13 +4,13 @@ namespace GraphQL.AspNet.Examples.Subscriptions.SubscriptionServer
     using System.Diagnostics;
     using GraphQL.AspNet.AzureServiceBus;
     using GraphQL.AspNet.Configuration;
+    using GraphQL.AspNet.Examples.Subscriptions.DataModel.Controllers;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.WebSockets;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
-    using Subscriptions_Server.Controllers;
 
     public class Startup
     {

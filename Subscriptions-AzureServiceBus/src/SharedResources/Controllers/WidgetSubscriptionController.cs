@@ -1,4 +1,4 @@
-﻿namespace Subscriptions_Server.Controllers
+﻿namespace GraphQL.AspNet.Examples.Subscriptions.DataModel.Controllers
 {
     using GraphQL.AspNet.Attributes;
     using GraphQL.AspNet.Controllers;
@@ -41,13 +41,13 @@
             // This could happen if a mutation calls PublishSubscriptionEvent
             // with bad data. A more robust error handling solution should be used
             // in a real application.
-            if (!this.ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return this.Ok();
 
             // use the supplied nameLike parameter (supplied by the subscriber) to filter the data
             // and determine if the data should be sent to the listener
-            if (nameLike == "*" || (eventData.Name != null && eventData.Name.StartsWith(nameLike)))
-                return this.Ok(eventData);
+            if (nameLike == "*" || eventData.Name != null && eventData.Name.StartsWith(nameLike))
+                return Ok(eventData);
 
             return this.Ok();
         }
