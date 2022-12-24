@@ -2,8 +2,7 @@
 
 This example project shows how to implement custom authorization using a mocked user store with ASP.NET Identity. The concept is the same regardless of your chosen authentication provider. 
 
-* _Project Type_: .NET 5.0
-* _Solution:_ `GraphQL-Authorization.sln`
+* _Solution:_ `Authorization.sln`
 
 
 When running this example, check out the `BakeryController` and note that the `allDonuts` field requires authorization while the `donut` field does not.
@@ -33,7 +32,7 @@ query {
  Authorization: abc123
  ```
 
- _Note_: This header is just an easy example to demonstrate passing of an authenticated user through to GraphQL.  In a real project, you'd likely be using a cookie value or JWT depending on your security implementation.
+ _Note_: This header is just an easy example to demonstrate passing of an authenticated user through to GraphQL.  In a real project, you'd likely be using a cookie value or a bearer token depending on your security implementation.
   
 
 ### Change the Authorization Method

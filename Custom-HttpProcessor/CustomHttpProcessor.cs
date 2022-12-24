@@ -24,7 +24,7 @@
         public CustomHttpProcessor(
             GraphSchema schema,
             IGraphQLRuntime<GraphSchema> graphqlRunTime,
-            IGraphQueryResponseWriter<GraphSchema> writer,
+            IQueryResponseWriter<GraphSchema> writer,
             IGraphEventLogger logger = null)
             : base(schema, graphqlRunTime, writer, logger)
         {
@@ -36,7 +36,7 @@
         /// <param name="queryData">The query data.</param>
         /// <param name="cancelToken">The cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Task&lt;IActionResult&gt;.</returns>
-        protected override Task SubmitGraphQLQueryAsync(GraphQueryData queryData, CancellationToken cancelToken = default)
+        protected override Task SubmitQueryAsync(GraphQueryData queryData, CancellationToken cancelToken = default)
         {
             // Deny ALL graph ql requests from being sent to a client between 1am and 4am
             // Place a breakpoint here and/or alter the hours to see that its being invoked.
@@ -49,7 +49,7 @@
             }
             else
             {
-                return base.SubmitGraphQLQueryAsync(queryData, cancelToken);
+                return base.SubmitQueryAsync(queryData, cancelToken);
             }
         }
     }
