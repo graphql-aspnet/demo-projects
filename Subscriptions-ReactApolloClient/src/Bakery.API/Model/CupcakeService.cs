@@ -9,11 +9,12 @@
 
     public class CupcakeService
     {
-        private static ConcurrentList<Cupcake> _cupCakeRepo;
+        private static object _locker = new object();
+        private static List<Cupcake> _cupCakeRepo;
 
         static CupcakeService()
         {
-            _cupCakeRepo = new ConcurrentList<Cupcake>();
+            _cupCakeRepo = new List<Cupcake>();
 
             _cupCakeRepo.Add(new Cupcake("Frosted Delight", PastryFlavor.Strawberry, 15));
             _cupCakeRepo.Add(new Cupcake("Plain Jane", PastryFlavor.Plain, 5));
@@ -29,10 +30,20 @@
         {
             IEnumerable<Cupcake> cakes = null;
             if (nameLike != null && nameLike != "*")
-                cakes = _cupCakeRepo.Where(x => x.Name.StartsWith(nameLike, StringComparison.OrdinalIgnoreCase));
+            {
+                lock (_locker)
+                {
+                    cakes = _cupCakeRepo.Where(x => x.Name.StartsWith(nameLike, StringComparison.OrdinalIgnoreCase));
+                }
+            }
 
             if (flavor.HasValue)
-                cakes = (cakes ?? _cupCakeRepo).Where(x => x.Flavor == flavor);
+            {
+                lock (_locker)
+                {
+                    cakes = (cakes ?? _cupCakeRepo).Where(x => x.Flavor == flavor);
+                }
+            }
 
             return (cakes ?? _cupCakeRepo).ToList();
         }
@@ -40,13 +51,22 @@
         public Cupcake CreateCupcake(string name, PastryFlavor flavor, int quantity)
         {
             var newCake = new Cupcake(name, flavor, quantity);
-            _cupCakeRepo.Add(newCake);
+            lock (_locker)
+            {
+                _cupCakeRepo.Add(newCake);
+            }
+
             return newCake;
         }
 
         public Cupcake UpdateCupcake(int id, string name, PastryFlavor flavor)
         {
-            var foundCake = _cupCakeRepo.Single(x => x.Id == id);
+            Cupcake foundCake = null;
+            lock (_locker)
+            {
+                foundCake = _cupCakeRepo.Single(x => x.Id == id);
+            }
+
             if (foundCake == null)
                 return null;
 
@@ -57,7 +77,13 @@
 
         public bool SellSingleCupcake(int id)
         {
-            var foundCake = _cupCakeRepo.Single(x => x.Id == id);
+            Cupcake foundCake = null;
+
+            lock (_locker)
+            {
+                foundCake = _cupCakeRepo.Single(x => x.Id == id);
+            }
+
             if (foundCake == null)
                 return false;
 

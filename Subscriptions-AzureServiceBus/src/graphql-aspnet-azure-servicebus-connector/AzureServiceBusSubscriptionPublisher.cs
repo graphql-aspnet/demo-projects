@@ -10,8 +10,8 @@
     using Azure.Messaging.ServiceBus;
     using GraphQL.AspNet.AzureServiceBus.Serializers;
     using GraphQL.AspNet.Common;
-    using GraphQL.AspNet.Execution.Subscriptions;
     using GraphQL.AspNet.Interfaces.Subscriptions;
+    using GraphQL.AspNet.SubscriptionServer;
     using Microsoft.Extensions.Logging;
 
     /// <summary>
@@ -51,7 +51,7 @@
         /// <param name="eventData">The event to publish.</param>
         /// <param name="cancelToken">The cancellation token that can be used by other objects or threads to receive notice of cancellation.</param>
         /// <returns>Task.</returns>
-        public async ValueTask PublishEvent(SubscriptionEvent eventData, CancellationToken cancelToken = default)
+        public async ValueTask PublishEventAsync(SubscriptionEvent eventData, CancellationToken cancelToken = default)
         {
             Validation.ThrowIfNull(eventData, nameof(eventData));
 

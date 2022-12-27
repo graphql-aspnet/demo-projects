@@ -9,7 +9,7 @@
     /// A converter for serializing a log entry's property collection. This converter does not
     /// read data.
     /// </summary>
-    public class JsonLogPropertyCollectionConverter : JsonConverter<IGraphLogPropertyCollection>
+    public class JsonLogPropertyCollectionConverter : JsonConverter<IGraphLogEntryPropertyCollection>
     {
         /// <summary>
         /// Reads and converts the JSON to type <typeparamref name="T" />.
@@ -18,7 +18,7 @@
         /// <param name="typeToConvert">The type to convert.</param>
         /// <param name="options">An object that specifies serialization options to use.</param>
         /// <returns>The converted value.</returns>
-        public override IGraphLogPropertyCollection Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override IGraphLogEntryPropertyCollection Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             throw new NotSupportedException("This converter does not support reading Json data");
         }
@@ -29,7 +29,7 @@
         /// <param name="writer">The writer to write to.</param>
         /// <param name="logEntry">The value to convert to JSON.</param>
         /// <param name="options">An object that specifies serialization options to use.</param>
-        public override void Write(Utf8JsonWriter writer, IGraphLogPropertyCollection logEntry, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, IGraphLogEntryPropertyCollection logEntry, JsonSerializerOptions options)
         {
             if (logEntry == null)
                 return;

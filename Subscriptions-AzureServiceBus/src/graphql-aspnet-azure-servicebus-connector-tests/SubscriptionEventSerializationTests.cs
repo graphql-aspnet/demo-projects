@@ -3,8 +3,8 @@ namespace GraphQL.AspNet.Tests.AzureServiceBus
     using System;
     using System.Text.Json;
     using GraphQL.AspNet.AzureServiceBus.Serializers;
-    using GraphQL.AspNet.Execution.Subscriptions;
     using GraphQL.AspNet.Schemas;
+    using GraphQL.AspNet.SubscriptionServer;
     using NUnit.Framework;
 
     [TestFixture]

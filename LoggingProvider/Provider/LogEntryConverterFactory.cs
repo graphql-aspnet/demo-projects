@@ -19,7 +19,7 @@
         /// <returns><see langword="true" /> if the instance can convert the specified object type; otherwise, <see langword="false" />.</returns>
         public override bool CanConvert(Type typeToConvert)
         {
-            return Validation.IsCastable<IGraphLogPropertyCollection>(typeToConvert);
+            return Validation.IsCastable<IGraphLogEntryPropertyCollection>(typeToConvert);
         }
 
         /// <summary>

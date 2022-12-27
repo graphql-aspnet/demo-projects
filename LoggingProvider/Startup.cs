@@ -1,6 +1,6 @@
 namespace GraphQL.AspNet.Examples.LoggingProvider
 {
-    using GraphQL.AspNet.Configuration.Mvc;
+    using GraphQL.AspNet.Configuration;
     using GraphQL.AspNet.Examples.LoggingProvider.Model;
     using GraphQL.AspNet.Examples.LoggingProvider.Provider;
     using GraphQL.AspNet.Interfaces.Schema;

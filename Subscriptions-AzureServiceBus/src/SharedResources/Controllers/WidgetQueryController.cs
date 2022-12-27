@@ -1,15 +1,10 @@
-﻿namespace MutationSubscription_Server.Controllers
+﻿namespace GraphQL.AspNet.Examples.Subscriptions.DataModel.Controllers
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
     using GraphQL.AspNet.Attributes;
     using GraphQL.AspNet.Controllers;
     using GraphQL.AspNet.Examples.Subscriptions.DataModel;
     using GraphQL.AspNet.Interfaces.Controllers;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Logging;
+    using System.Collections.Generic;
 
     /// <summary>
     /// A sample controller to extract some widget data from the mock repository. There

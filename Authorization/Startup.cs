@@ -1,6 +1,6 @@
 namespace GraphQL.AspNet.Examples.Authorization
 {
-    using GraphQL.AspNet.Configuration.Mvc;
+    using GraphQL.AspNet.Configuration;
     using GraphQL.AspNet.Examples.Authorization.Users;
     using GraphQL.AspNet.Security;
     using Microsoft.AspNetCore.Builder;
