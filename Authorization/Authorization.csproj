@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraphQL.AspNet" Version="1.0.0-rc2" />
+    <PackageReference Include="GraphQL.AspNet" Version="1.0.0-rc3" />
     <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
   </ItemGroup>
 
