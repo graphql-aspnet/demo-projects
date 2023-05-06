@@ -1,4 +1,4 @@
-﻿namespace GraphQL.Aspnet.Examples.FileUpload.Model
+﻿namespace GraphQL.Aspnet.Examples.MultipartRequest.API.Model
 {
     public class UploadConfiguration
     {

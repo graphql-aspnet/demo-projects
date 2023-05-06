@@ -1,11 +1,15 @@
-﻿namespace GraphQL.Aspnet.Examples.FileUpload.Controllers
+﻿namespace GraphQL.Aspnet.Examples.MultipartRequest.API.Controllers
 {
-    using GraphQL.Aspnet.Examples.FileUpload.Model;
+    using GraphQL.Aspnet.Examples.MultipartRequest.API.Model;
     using GraphQL.AspNet.Common;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.StaticFiles;
     using System.IO;
 
+    /// <summary>
+    /// A standard rest based controller that will search for a file with a given name inside the globally
+    /// known file download folder and attempt to serve it to the requestor.
+    /// </summary>
     [Route("downloads")]
     public class FileDownloadApiController : Controller
     {
@@ -15,6 +19,7 @@
         {
             _config = Validation.ThrowIfNullOrReturn(config, nameof(config));
         }
+
         private string CreateExpectedLocalPath(string fileName)
         {
             // *******************************

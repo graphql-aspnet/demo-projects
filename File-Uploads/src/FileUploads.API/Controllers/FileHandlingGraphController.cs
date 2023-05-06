@@ -1,6 +1,6 @@
-namespace GraphQL.Aspnet.Examples.FileUpload.Controllers
+namespace GraphQL.Aspnet.Examples.FileUploadMultipartRequest.APIControllers
 {
-    using GraphQL.Aspnet.Examples.FileUpload.Model;
+    using GraphQL.Aspnet.Examples.MultipartRequest.API.Model;
     using GraphQL.AspNet.Attributes;
     using GraphQL.AspNet.Common;
     using GraphQL.AspNet.Controllers;
@@ -24,11 +24,12 @@ namespace GraphQL.Aspnet.Examples.FileUpload.Controllers
         private string CreateExpectedLocalPath(string fileName)
         {
             // *******************************
-            // Warning: this is just a sample project
-            //          In production do not directly combine the received filename
-            //          with local paths without some sort of checks.
-            //          Doing this can allow an attacker to access folders beyond your
-            //          original intent.
+            // WARNING:
+            // This is just a sample project
+            // In production do not directly combine the received filename
+            // with local paths without some sort of checks.
+            // Doing this can allow an attacker to access folders beyond your
+            // original intent.
             // *******************************
             return Path.Combine(_config.UploadFolderPath, fileName);
         }

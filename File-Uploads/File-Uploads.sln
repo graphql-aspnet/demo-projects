@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileUploads.API.Local", "src\FileUploads.API\FileUploads.API.csproj", "{DED299C3-DC50-4453-ADBD-E79A3245F98F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUploads.UI.Local", "src\FileUploads.UI\FileUploads.UI.csproj", "{8BD9C8E3-957F-4B9D-AF81-F210C877BDBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DED299C3-DC50-4453-ADBD-E79A3245F98F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED299C3-DC50-4453-ADBD-E79A3245F98F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED299C3-DC50-4453-ADBD-E79A3245F98F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED299C3-DC50-4453-ADBD-E79A3245F98F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BBC5F11-EC5E-40E2-8DF4-CB3B843D4602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BBC5F11-EC5E-40E2-8DF4-CB3B843D4602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BBC5F11-EC5E-40E2-8DF4-CB3B843D4602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BBC5F11-EC5E-40E2-8DF4-CB3B843D4602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BD9C8E3-957F-4B9D-AF81-F210C877BDBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD9C8E3-957F-4B9D-AF81-F210C877BDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD9C8E3-957F-4B9D-AF81-F210C877BDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD9C8E3-957F-4B9D-AF81-F210C877BDBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {804A4D00-1A60-402E-9B40-458E71CF54F2}
+	EndGlobalSection
+EndGlobal

@@ -1,2 +1,3 @@
 # Ignore the default upload directory
 UploadedFiles/
+.next/

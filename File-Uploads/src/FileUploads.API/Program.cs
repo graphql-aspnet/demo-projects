@@ -1,6 +1,6 @@
-namespace GraphQL.Aspnet.Examples.FileUpload
+namespace GraphQL.Aspnet.Examples.MultipartRequest.API
 {
-    using GraphQL.Aspnet.Examples.FileUpload.Model;
+    using GraphQL.Aspnet.Examples.MultipartRequest.API.Model;
     using GraphQL.AspNet.Configuration;
     using GraphQL.AspNet.ServerExtensions.MultipartRequests;
     using Microsoft.AspNetCore.Builder;
@@ -39,22 +39,29 @@ namespace GraphQL.Aspnet.Examples.FileUpload
 
             builder.Services.AddControllers();
 
+            // ---------------------------------------------
+            // register GraphQL and the server extension with the schema
+            // ---------------------------------------------
             builder.Services.AddGraphQL(o =>
             {
-                // register the server extension with the schema
-                o.RegisterExtension<MultipartRequestServerExtension>();
+                o.AddMultipartRequestSupport();
             });
 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             app.UseCors(ALL_ORIGINS_POLICY);
-
             app.UseGraphQL();
             app.MapControllers();
             app.Run();
         }
 
+        /// <summary>
+        /// Adds a custom configuration object that can be injected to tell a controller
+        /// where it should save off files uploaded via graphql and how to create URLs to serve
+        /// those files to users.
+        /// </summary>
+        /// <param name="builder">The host builder to .</param>
         private static void AddUploadFolderConfiguration(WebApplicationBuilder builder)
         {
             string urls = builder.Configuration.GetValue<string>("urls");
