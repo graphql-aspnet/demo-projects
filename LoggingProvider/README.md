@@ -2,7 +2,7 @@
 
 This example project shows how to act on the structured logging events to generate a JSON document of the properties they contain.
 
-_Project Type_: .NET 5.0
+_Project Type_: .NET 7.0
 
 _Solution:_ `LoggingProvider.sln`
 
