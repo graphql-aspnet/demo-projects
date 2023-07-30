@@ -1,9 +1,6 @@
 ﻿namespace GraphQL.AspNet.Examples.Authorization.Users
 {
-    using System;
-    using Microsoft.AspNet.Identity;
-
-    public class AppRole : IRole<string>
+    public class AppRole
     {
         public AppRole(string id, string name)
         {
@@ -13,7 +10,6 @@
         }
 
         public string Id { get; }
-
         public string Name { get; set; }
         public string NormalizedName { get; set; }
     }
