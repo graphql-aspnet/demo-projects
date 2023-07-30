@@ -1,8 +1,6 @@
 ﻿namespace GraphQL.AspNet.Examples.Authorization.Users
 {
-    using Microsoft.AspNet.Identity;
-
-    public class AppUser : IUser<string>
+    public class AppUser
     {
         public AppUser(string id, string username)
         {
