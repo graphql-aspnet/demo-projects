@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>GraphQL.AspNet.Examples.Subscriptions.DataModel</RootNamespace>
   </PropertyGroup>
 
@@ -12,8 +12,8 @@
 
 
   <ItemGroup>
-    <PackageReference Include="GraphQL.AspNet" Version="1.2.3" />
-    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="1.2.3" />
+    <PackageReference Include="GraphQL.AspNet" Version="1.3.0" />
+    <PackageReference Include="GraphQL.AspNet.Subscriptions" Version="1.3.0" />
   </ItemGroup>
 
 </Project>

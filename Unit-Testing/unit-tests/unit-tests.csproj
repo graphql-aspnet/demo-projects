@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>GraphQL.AspNet.Examples.TestApi.Tests</RootNamespace>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
@@ -9,8 +9,8 @@
 
   <ItemGroup>
 
-    <PackageReference Include="GraphQL.Aspnet" Version="1.2.3" />
-    <PackageReference Include="GraphQL.Aspnet.TestFramework" Version="1.2.3" />
+    <PackageReference Include="GraphQL.Aspnet" Version="1.3.0" />
+    <PackageReference Include="GraphQL.Aspnet.TestFramework" Version="1.3.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
