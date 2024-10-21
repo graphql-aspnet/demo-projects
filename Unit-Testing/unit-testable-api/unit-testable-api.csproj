@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GraphQL.Aspnet" Version="1.3.0" />
+    <PackageReference Include="GraphQL.Aspnet" Version="1.4.2" />
   </ItemGroup>
 
 </Project>
