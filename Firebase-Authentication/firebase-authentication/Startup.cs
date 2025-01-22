@@ -11,6 +11,8 @@ namespace Firebase.AuthTest
 
     public class Startup
     {
+        private const string ALL_ORIGINS_POLICY = "_allOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -21,6 +23,20 @@ namespace Firebase.AuthTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // to allow use on many of the tools for testing (graphiql, altair etc.)
+            // Do not do this in production
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                    ALL_ORIGINS_POLICY,
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                    });
+            });
+
             var firebaseProjectId = this.Configuration.GetValue<string>("firebaseProjectId");
             if (string.IsNullOrWhiteSpace(firebaseProjectId))
                 throw new ArgumentException("Firebase Project Id must be set.", nameof(firebaseProjectId));
@@ -54,6 +70,7 @@ namespace Firebase.AuthTest
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(ALL_ORIGINS_POLICY);
             app.UseRouting();
 
             // make sure to call Authentication and Authorization before GraphQL
