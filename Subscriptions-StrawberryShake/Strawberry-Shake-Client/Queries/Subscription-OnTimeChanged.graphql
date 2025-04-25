@@ -1,0 +1,5 @@
+﻿subscription OnTimeChanged{
+  onTimeChanged {
+    currentTime
+  }
+}

@@ -1,0 +1,19 @@
+schema {
+  query: Query
+  subscription: Subscription
+}
+
+"A time of day that does not include a date component."
+scalar TimeOnly
+
+type Query {
+  currentTime: TimeOnly!
+}
+
+type CurrentTimeEventData {
+  currentTime: TimeOnly!
+}
+
+type Subscription {
+  onTimeChanged: CurrentTimeEventData
+}

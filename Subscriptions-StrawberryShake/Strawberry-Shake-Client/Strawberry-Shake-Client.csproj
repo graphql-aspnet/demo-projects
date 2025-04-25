@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>GraphQL.AspNet.Examples.StrawberryShakeClient</RootNamespace>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <GraphQL Update="queries/Query-Time.graphql" Generator="MSBuild:GenerateGraphQLCode" />
+    <GraphQL Update="queries/Subscription-OnTimeChanged.graphql" Generator="MSBuild:GenerateGraphQLCode" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <PackageReference Include="StrawberryShake.Server" Version="15.1.3" />
+    <PackageReference Include="StrawberryShake.Transport.WebSockets" Version="15.1.3" />
+    <PackageReference Include="System.Reactive" Version="6.0.1" />
+  </ItemGroup>
+
+</Project>
