@@ -1,5 +1,0 @@
-<Solution>
-  <Project Path="../../graphql-aspnet/src/graphql-aspnet/graphql-aspnet.csproj" />
-  <Project Path="src/FileUploads.API/FileUploads.API.Local.csproj" />
-  <Project Path="src/FileUploads.UI/FileUploads.UI.Local.csproj" />
-</Solution>
