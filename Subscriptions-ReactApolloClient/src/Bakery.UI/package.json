@@ -1,0 +1,35 @@
+{
+    "name": "graphql-aspnet-react-apollo-demo",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@apollo/client": "^3.11.10",
+        "graphql": "^16.9.0",
+        "graphql-ws": "^5.16.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "web-vitals": "^4.2.4"
+    },
+    "scripts": {
+        "start": "vite",
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "test": "vitest"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.1.0",
+        "@testing-library/user-event": "^14.5.2",
+        "@types/jest": "^29.5.14",
+        "@types/node": "^22.10.2",
+        "@types/react": "^18.3.18",
+        "@types/react-dom": "^18.3.5",
+        "@vitejs/plugin-react": "^4.3.4",
+        "eslint": "^8.57.1",
+        "jsdom": "^25.0.1",
+        "typescript": "^5.7.2",
+        "vite": "^6.0.3",
+        "vitest": "^2.1.8"
+    }
+}

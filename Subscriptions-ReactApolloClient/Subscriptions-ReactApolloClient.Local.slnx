@@ -5,5 +5,4 @@
   <Project Path="../../graphql-aspnet/src/graphql-aspnet-subscriptions/graphql-aspnet-subscriptions.csproj" />
   <Project Path="../../graphql-aspnet/src/graphql-aspnet/graphql-aspnet.csproj" />
   <Project Path="src/Bakery.API/Bakery.API.Local.csproj" />
-  <Project Path="src/Bakery.UI/Bakery.UI.Local.csproj" />
 </Solution>

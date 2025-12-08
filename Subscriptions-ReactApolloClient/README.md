@@ -3,7 +3,7 @@
 ## Technology Used
 ```
 * GraphQL Asp.Net Subscriptions
-* ReactJS
+* ReactJS (w/ vite)
 * Apollo Client
 ```
 
@@ -11,16 +11,14 @@ This project demonstrates the capabilities of the GraphQL ASP.NET subscription s
 
 ### Launching the demo
 
-**Using Just Visual Studio**
-1. In visual studio, open the solution 
-2. Right click the solution in solution explorer and choose properties.
-3. Select Start multiple projects and choose `Bakery.API` and `Bakery.UI`
+**Open and Start the API**
+1. In visual studio, Rider or other IDE of choice open the solution: '`Subscriptions-ReactApolloClient.slnx`
+2. Start the solution which should launch the single `Bakery.API` project
 4. Run the solution
+    * Server runs at `localhost:5000`
 
-**Using a Javascript IDE**
-* In Visual Studio
-   1. Open the Solution
-   2. Set `Bakery.API` as the start up project and run the demo.
-   3. Start the solution in visual studio, launching the API.
-* Open `src/Bakery.UI/ClientApp` in your favorite javascript IDE, like VS Code.  
-   1. Execute `npm start` or `yarn start` from the command line
+**Open and Start the UI**
+1. Open `src/Bakery.UI` in your favorite javascript IDE (VS Code, Web Storm etc.)
+2. Run `npm install` from the command line
+3. Run `npm start` from the command line
+    * Client runs at `localhost:3000` and already points to the default server port. 

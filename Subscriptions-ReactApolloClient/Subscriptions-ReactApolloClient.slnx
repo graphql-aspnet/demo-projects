@@ -3,5 +3,4 @@
     <File Path="README.md" />
   </Folder>
   <Project Path="src/Bakery.API/Bakery.API.csproj" />
-  <Project Path="src/Bakery.UI/Bakery.UI.csproj" />
 </Solution>
