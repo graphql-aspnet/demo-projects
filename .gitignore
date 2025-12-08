@@ -9,6 +9,7 @@
 *.userosscache
 *.sln.docstates
 *.[Ll]ocal.sln
+*.[Ll]ocal.slnx
 *.[Ll]ocal.csproj
 
 appsettings.[Dd]evelopment.json
@@ -295,6 +296,9 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# Claude
+.claude/
 
 # CodeRush
 .cr/
