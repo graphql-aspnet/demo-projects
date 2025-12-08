@@ -2,9 +2,9 @@
 
 This example project shows how to act on the structured logging events to generate a JSON document of the properties they contain.
 
-_Project Type_: .NET 7.0
+_Project Type_: .NET 10.0
 
-_Solution:_ `LoggingProvider.sln`
+_Solution:_ `LoggingProvider.slnx`
 
 ### Example Output
 
@@ -12,7 +12,7 @@ _Solution:_ `LoggingProvider.sln`
 [
   {
     eventId: 85120,
-    dateTimeUTC: "2019-10-08T23:27:32.7330316+00:00",
+    dateTimeUTC: "2025-10-08T23:27:32.7330316+00:00",
     logEntryId: "119904ccd1b74d15b9dd8d4e16b0cd8f",
     eventName: "GraphQL Schema Route Registered",
     schemaType: "GraphQL.AspNet.Schemas.GraphSchema",
@@ -21,7 +21,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 85100,
-    dateTimeUTC: "2019-10-08T23:27:40.4598314+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.4598314+00:00",
     logEntryId: "dbe8104f70f94e54bc604e6125bfd742",
     eventName: "GraphQL Schema Instance Created",
     schemaType: "GraphQL.AspNet.Schemas.GraphSchema",
@@ -138,7 +138,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 85110,
-    dateTimeUTC: "2019-10-08T23:27:40.4841785+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.4841785+00:00",
     logEntryId: "26334067123a408e92c85ba3fdb440fc",
     eventName: "GraphQL Schema Pipeline Instance Created",
     schemaType: "GraphQL.AspNet.Schemas.GraphSchema",
@@ -153,7 +153,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86000,
-    dateTimeUTC: "2019-10-08T23:27:40.5228883+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.5228883+00:00",
     logEntryId: "a2e22b3ef7554563824852cde410347c",
     eventName: "GraphQL Request Received",
     operationRequestId: "e078c3dcbe7242758a3ae9ac28ee0db9",
@@ -164,7 +164,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86400,
-    dateTimeUTC: "2019-10-08T23:27:40.6529116+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.6529116+00:00",
     logEntryId: "0c4fa736a02e4b479bdbeceea1daca6c",
     eventName: "GraphQL Query Plan Generated",
     schemaType: "GraphQL.AspNet.Schemas.GraphSchema",
@@ -177,7 +177,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86500,
-    dateTimeUTC: "2019-10-08T23:27:40.6847433+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.6847433+00:00",
     logEntryId: "ffbec6f6120943dda94a0e1e7f3aeeb2",
     eventName: "GraphQL Field Resolution Started",
     pipelineRequestId: "04db6b5278d94e859eb2aa5262575aeb",
@@ -187,7 +187,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86520,
-    dateTimeUTC: "2019-10-08T23:27:40.6980272+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.6980272+00:00",
     logEntryId: "4ffe82754b4746ebabb40b780dea6406",
     eventName: "GraphQL Authorization Started",
     pipelineRequestId: "04db6b5278d94e859eb2aa5262575aeb",
@@ -197,7 +197,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86530,
-    dateTimeUTC: "2019-10-08T23:27:40.7100963+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.7100963+00:00",
     logEntryId: "2584b29b2f1a406b8ab636ef7bac501f",
     eventName: "GraphQL Authorization Completed",
     pipelineRequestId: "04db6b5278d94e859eb2aa5262575aeb",
@@ -209,7 +209,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86600,
-    dateTimeUTC: "2019-10-08T23:27:40.7260805+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.7260805+00:00",
     logEntryId: "23ecfa96a5a14b03a3d24117c4ef9128",
     eventName: "GraphQL Field Controller Action Started",
     pipelineRequestId: "04db6b5278d94e859eb2aa5262575aeb",
@@ -222,7 +222,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86610,
-    dateTimeUTC: "2019-10-08T23:27:40.7434378+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.7434378+00:00",
     logEntryId: "f920c9b355d842cb870e27fd3d8c65ce",
     eventName: "GraphQL Field Controller Action Model Validated",
     pipelineRequestId: "04db6b5278d94e859eb2aa5262575aeb",
@@ -235,7 +235,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86640,
-    dateTimeUTC: "2019-10-08T23:27:40.7597542+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.7597542+00:00",
     logEntryId: "a89cb133f49b4c849b25008d0c0a2c4b",
     eventName: "GraphQL Field Controller Action Completed",
     pipelineRequestId: "04db6b5278d94e859eb2aa5262575aeb",
@@ -247,7 +247,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86599,
-    dateTimeUTC: "2019-10-08T23:27:40.77802+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.77802+00:00",
     logEntryId: "fd113b07098e44eb83e756e9dab47a3a",
     eventName: "GraphQL Field Resolution Completed",
     pipelineRequestId: "04db6b5278d94e859eb2aa5262575aeb",
@@ -259,7 +259,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86500,
-    dateTimeUTC: "2019-10-08T23:27:40.8021313+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.8021313+00:00",
     logEntryId: "95920f0e534046dda1c1d097261bff61",
     eventName: "GraphQL Field Resolution Started",
     pipelineRequestId: "04ce491fa5e944acb2c60a078a9aab08",
@@ -269,7 +269,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86520,
-    dateTimeUTC: "2019-10-08T23:27:40.810226+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.810226+00:00",
     logEntryId: "7c87b10669d247e2bf4cef7b50cb0091",
     eventName: "GraphQL Authorization Started",
     pipelineRequestId: "04ce491fa5e944acb2c60a078a9aab08",
@@ -279,7 +279,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86530,
-    dateTimeUTC: "2019-10-08T23:27:40.8198733+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.8198733+00:00",
     logEntryId: "10cf9cd22f6d415a92b69b46903d17e2",
     eventName: "GraphQL Authorization Completed",
     pipelineRequestId: "04ce491fa5e944acb2c60a078a9aab08",
@@ -291,7 +291,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86599,
-    dateTimeUTC: "2019-10-08T23:27:40.8292905+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.8292905+00:00",
     logEntryId: "441cbb5c5f514a9095592749e7ba592f",
     eventName: "GraphQL Field Resolution Completed",
     pipelineRequestId: "04ce491fa5e944acb2c60a078a9aab08",
@@ -303,7 +303,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86500,
-    dateTimeUTC: "2019-10-08T23:27:40.8391089+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.8391089+00:00",
     logEntryId: "aea7ee5495be415d95b21a24e2bb1ba1",
     eventName: "GraphQL Field Resolution Started",
     pipelineRequestId: "0f489ec1988e4cbb804dfa80faaa9f80",
@@ -313,7 +313,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86520,
-    dateTimeUTC: "2019-10-08T23:27:40.8471454+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.8471454+00:00",
     logEntryId: "b60877d003bc4bec8e7281b343f72880",
     eventName: "GraphQL Authorization Started",
     pipelineRequestId: "0f489ec1988e4cbb804dfa80faaa9f80",
@@ -323,7 +323,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86530,
-    dateTimeUTC: "2019-10-08T23:27:40.8563504+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.8563504+00:00",
     logEntryId: "289c4c731004486f9b9a34b63a32bbaf",
     eventName: "GraphQL Authorization Completed",
     pipelineRequestId: "0f489ec1988e4cbb804dfa80faaa9f80",
@@ -335,7 +335,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86599,
-    dateTimeUTC: "2019-10-08T23:27:40.8652823+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.8652823+00:00",
     logEntryId: "742c0cf499354b95ab1a5e148cbc078e",
     eventName: "GraphQL Field Resolution Completed",
     pipelineRequestId: "0f489ec1988e4cbb804dfa80faaa9f80",
@@ -347,7 +347,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86500,
-    dateTimeUTC: "2019-10-08T23:27:40.8736226+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.8736226+00:00",
     logEntryId: "e61cf4aeb7644defb4fc0433a7a0d696",
     eventName: "GraphQL Field Resolution Started",
     pipelineRequestId: "10f451f95d06454380ed0d69202d178f",
@@ -357,7 +357,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86520,
-    dateTimeUTC: "2019-10-08T23:27:40.8815039+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.8815039+00:00",
     logEntryId: "0e4c8c673b574e358706b49f6fbba3c6",
     eventName: "GraphQL Authorization Started",
     pipelineRequestId: "10f451f95d06454380ed0d69202d178f",
@@ -367,7 +367,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86530,
-    dateTimeUTC: "2019-10-08T23:27:40.8896333+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.8896333+00:00",
     logEntryId: "cbdc0df3f7894b15b85c15001caf31c1",
     eventName: "GraphQL Authorization Completed",
     pipelineRequestId: "10f451f95d06454380ed0d69202d178f",
@@ -379,7 +379,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86599,
-    dateTimeUTC: "2019-10-08T23:27:40.8991272+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.8991272+00:00",
     logEntryId: "46a09362f8914e5e9b8064ca07a4e002",
     eventName: "GraphQL Field Resolution Completed",
     pipelineRequestId: "10f451f95d06454380ed0d69202d178f",
@@ -391,7 +391,7 @@ _Solution:_ `LoggingProvider.sln`
   },
   {
     eventId: 86700,
-    dateTimeUTC: "2019-10-08T23:27:40.9126613+00:00",
+    dateTimeUTC: "2025-10-08T23:27:40.9126613+00:00",
     logEntryId: "084c939ce2bb4097843e1c395c7d9dd8",
     eventName: "GraphQL Request Completed",
     operationRequestId: "e078c3dcbe7242758a3ae9ac28ee0db9",

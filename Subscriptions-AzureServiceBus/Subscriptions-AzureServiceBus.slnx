@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="src/graphql-aspnet-azure-servicebus-connector-tests/graphql-aspnet-azure-servicebus-connector-tests.csproj" />
+  </Folder>
+  <Project Path="src/graphql-aspnet-azure-servicebus-connector/graphql-aspnet-azure-servicebus-connector.csproj" />
+  <Project Path="src/QueryMutation-Server/QueryMutation-Server.csproj" />
+  <Project Path="src/SharedResources/SharedResources.csproj" />
+  <Project Path="src/Subscriptions-Server/Subscriptions-Server.csproj" />
+</Solution>

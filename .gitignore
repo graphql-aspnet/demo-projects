@@ -296,6 +296,9 @@ paket-files/
 .idea/
 *.sln.iml
 
+# Claude
+.claude/
+
 # CodeRush
 .cr/
 

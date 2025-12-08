@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Strawberry-Shake-Client/Strawberry-Shake-Client.csproj" />
+  <Project Path="Subscription-Server/Subscription-Server.csproj" />
+</Solution>

@@ -3,20 +3,19 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "@apollo/client": "^3.7.0",
-        "@testing-library/jest-dom": "^5.11.4",
-        "@testing-library/react": "^11.1.0",
-        "@testing-library/user-event": "^12.1.10",
-        "@types/jest": "^26.0.15",
-        "@types/node": "^12.0.0",
-        "graphql": "^15.8.0",
-        "graphql-ws": "^5.11.2",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
+        "@apollo/client": "^3.11.10",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.1.0",
+        "@testing-library/user-event": "^14.5.2",
+        "@types/jest": "^29.5.14",
+        "@types/node": "^22.10.2",
+        "graphql": "^16.9.0",
+        "graphql-ws": "^5.16.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
         "react-scripts": "5.0.1",
-        "subscriptions-transport-ws": "^0.9.18",
-        "typescript": "^4.0.3",
-        "web-vitals": "^0.2.4"
+        "typescript": "^5.7.2",
+        "web-vitals": "^4.2.4"
     },
     "scripts": {
         "start": "react-scripts start",
@@ -43,8 +42,8 @@
         ]
     },
     "devDependencies": {
-        "@types/react": "^18.0.21",
-        "@types/react-dom": "^18.0.6",
-        "eslint": "^7.18.0"
+        "@types/react": "^18.3.18",
+        "@types/react-dom": "^18.3.5",
+        "eslint": "^8.57.1"
     }
 }

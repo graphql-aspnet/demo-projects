@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/FileUploads.API/FileUploads.API.csproj" />
+  <Project Path="src/FileUploads.UI/FileUploads.UI.csproj" />
+</Solution>

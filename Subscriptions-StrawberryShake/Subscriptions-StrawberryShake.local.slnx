@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../../graphql-aspnet/src/graphql-aspnet-subscriptions/graphql-aspnet-subscriptions.csproj" />
+  <Project Path="../../graphql-aspnet/src/graphql-aspnet/graphql-aspnet.csproj" />
+  <Project Path="Strawberry-Shake-Client/Strawberry-Shake-Client.csproj" />
+  <Project Path="Subscription-Server/Subscription-Server.local.csproj" />
+</Solution>
