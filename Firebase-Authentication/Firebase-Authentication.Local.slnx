@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="../../graphql-aspnet/src/graphql-aspnet/graphql-aspnet.csproj" />
-  <Project Path="firebase-authentication/Firebase-Authentication.Local.csproj" />
-</Solution>
