@@ -1,6 +1,0 @@
-<Solution>
-  <Project Path="../../graphql-aspnet/src/graphql-aspnet/graphql-aspnet.csproj" />
-  <Project Path="../../graphql-aspnet/src/unit-tests/graphql-aspnet-testframework/graphql-aspnet-testframework.csproj" />
-  <Project Path="unit-testable-api/unit-testable-api.local.csproj" />
-  <Project Path="unit-tests/unit-tests.local.csproj" />
-</Solution>
